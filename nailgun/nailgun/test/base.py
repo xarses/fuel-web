@@ -249,6 +249,7 @@ class Environment(object):
             node.timestamp = datetime.now()
             if 'cluster_id' in node_data:
                 cluster_id = node_data.pop('cluster_id')
+                node.ip = self.assign_node_ip() or '127.0.0.1'
                 for cluster in self.clusters:
                     if cluster.id == cluster_id:
                         node.cluster = cluster
@@ -267,6 +268,14 @@ class Environment(object):
             self.nodes.append(node)
 
         return node
+
+    def assign_node_ip(self, network_id=None, ip_addr=None):
+        if ip_addr:
+            return str(ip_addr)
+        elif not network_id:
+            network_id = self.network_manager.get_admin_network_group_id
+        return self.network_manager.get_free_ips(network_id)[0]
+
 
     def create_rh_account(self, **kwargs):
         username = kwargs.pop("username", "rh_username")
