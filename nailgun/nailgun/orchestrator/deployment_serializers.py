@@ -730,11 +730,8 @@ class NeutronNetworkDeploymentSerializer(NetworkDeploymentSerializer):
             netgroup = nm.get_node_network_by_netname(node.id, ngname)
             attrs['endpoints'][brname]['IP'] = [netgroup['ip']]
             netgroups[ngname] = netgroup
-        attrs['endpoints']['br-ex']['gateway'] = netgroups['public']['gateway']
-        if netgroups['management'].get('gateway'):
-            attrs['endpoints']['br-mgmt']['gateway'] = netgroups['management']['gateway']
-        if netgroups['storage'].get('gateway'):
-            attrs['endpoints']['br-storage']['gateway'] = netgroups['storage']['gateway']
+            if netgroups[ngname].get('gateway'):
+                attrs['endpoints'][brname]['gateway'] = network_groups[ngname]['gateway']
 
         # Connect interface bridges to network bridges.
         for ngname, brname in netgroup_mapping:
@@ -785,8 +782,10 @@ class NeutronNetworkDeploymentSerializer(NetworkDeploymentSerializer):
         admin_net = nm.get_node_network_by_netname(node.id, 'fuelweb_admin')
         attrs['endpoints'][node.admin_interface.name] = {
             "IP": [cls.get_admin_ip_w_prefix(node)],
-            "gateway": admin_net.get('gateway')
         }
+
+        if admin_net.get('gateway'):
+            attrs['endpoints'][node.admin_interface.name]["gateway"]: admin_net.get('gateway')
         attrs['roles']['fw-admin'] = node.admin_interface.name
 
         return attrs
