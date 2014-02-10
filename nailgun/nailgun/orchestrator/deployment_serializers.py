@@ -731,7 +731,7 @@ class NeutronNetworkDeploymentSerializer(NetworkDeploymentSerializer):
             attrs['endpoints'][brname]['IP'] = [netgroup['ip']]
             netgroups[ngname] = netgroup
             if netgroups[ngname].get('gateway'):
-                attrs['endpoints'][brname]['gateway'] = network_groups[ngname]['gateway']
+                attrs['endpoints'][brname]['gateway'] = netgroups[ngname]['gateway']
 
         # Connect interface bridges to network bridges.
         for ngname, brname in netgroup_mapping:
@@ -785,7 +785,8 @@ class NeutronNetworkDeploymentSerializer(NetworkDeploymentSerializer):
         }
 
         if admin_net.get('gateway'):
-            attrs['endpoints'][node.admin_interface.name]["gateway"]: admin_net.get('gateway')
+            attrs['endpoints'][node.admin_interface.name]["gateway"] = admin_net.get('gateway')
+
         attrs['roles']['fw-admin'] = node.admin_interface.name
 
         return attrs
