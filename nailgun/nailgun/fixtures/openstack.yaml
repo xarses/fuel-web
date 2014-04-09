@@ -318,11 +318,19 @@
       - controller
       - compute
       - cinder
+      - ceph-mon
       - ceph-osd
+      - ceph-radosgw
     roles_metadata:
+      ceph-mon:
+        name: "Ceph Monitor"
+        description: "Ceph Monitor"
       ceph-osd:
         name: "Storage - Ceph OSD"
         description: "Ceph storage can be configured to provide storage for block volumes (Cinder), images (Glance) and ephemeral instance storage (Nova). It can also provide object storage through the S3 and Swift API (See settings to enable each)."
+      ceph-radosgw:
+        name: "Ceph RadosGW"
+        description: "Ceph RadosGW nodes will provide a gateway between Ceph and S3 and SWift API. (FIXM fuel-lib) This won't work if don't place me on a controller"
     networks_metadata:
       neutron:
         networks:
@@ -385,10 +393,14 @@
               metadata_proxy_shared_secret: ""
     volumes_metadata:
       volumes_roles_mapping:
+        ceph-mon:
+          - {allocate_size: "min", id: "os"}
         ceph-osd:
           - {allocate_size: "min", id: "os"}
           - {allocate_size: "min", id: "cephjournal"}
           - {allocate_size: "full-disk", id: "ceph"}
+        ceph-radosgw:
+          - {allocate_size: "min", id: "os"}
         controller-ceph-image:
           - {allocate_size: 'all', id: 'os'}
       volumes:

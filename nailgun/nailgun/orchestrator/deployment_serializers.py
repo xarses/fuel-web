@@ -229,25 +229,40 @@ class DeploymentHASerializer(DeploymentMultinodeSerializer):
         serialized_nodes = super(
             DeploymentHASerializer, cls).serialize_nodes(nodes)
         cls.set_primary_controller(serialized_nodes)
+        cls.set_ceph_primary_mon(serialized_nodes)
 
         return serialized_nodes
+
+    @classmethod
+    def __set_special_role_on_first_node_with_role(cls, nodes, role, new_role):
+        """Sets a special new_role on the first node of role.
+        """
+        sorted_nodes = sorted(
+            nodes, key=lambda node: int(node['uid']))
+
+        primary_controller = cls.filter_by_roles(
+            sorted_nodes, [new_role])
+
+        if not primary_controller:
+            controllers = cls.filter_by_roles(
+                sorted_nodes, [role])
+            if controllers:
+                controllers[0]['role'] = new_role
 
     @classmethod
     def set_primary_controller(cls, nodes):
         """Set primary controller for the first controller
         node if it not set yet
         """
-        sorted_nodes = sorted(
-            nodes, key=lambda node: int(node['uid']))
+        cls.__set_special_role_on_first_node_with_role(
+            nodes, 'controller', 'primary-controller')
 
-        primary_controller = cls.filter_by_roles(
-            sorted_nodes, ['primary-controller'])
-
-        if not primary_controller:
-            controllers = cls.filter_by_roles(
-                sorted_nodes, ['controller'])
-            if controllers:
-                controllers[0]['role'] = 'primary-controller'
+    @classmethod
+    def set_ceph_primary_mon(cls, nodes):
+        """Set ceph-primary-mon.
+        """
+        cls.__set_special_role_on_first_node_with_role(
+            nodes, 'ceph', 'ceph-primary-mon')
 
     @classmethod
     def get_last_controller(cls, nodes):
@@ -326,6 +341,15 @@ class DeploymentHASerializer(DeploymentMultinodeSerializer):
         for n in cls.by_role(nodes, 'storage'):
             n['priority'] = storage_prior
 
+        # Deploy Ceph primary monitor
+        for n in cls.by_role(nodes, 'ceph-primary-mon'):
+            n['priority'] = prior.next
+
+        # Deploy Ceph Monitors
+        ceph_mon_prior = prior.next
+        for n in cls.by_role(nodes, 'ceph-mon'):
+            n['priority'] = ceph_mon_prior
+
         # Deploy primary-controller
         for n in cls.by_role(nodes, 'primary-controller'):
             n['priority'] = prior.next
@@ -338,6 +362,8 @@ class DeploymentHASerializer(DeploymentMultinodeSerializer):
         for n in cls.not_roles(nodes, ['primary-swift-proxy',
                                        'swift-proxy',
                                        'storage',
+                                       'ceph-primary-mon',
+                                       'ceph-mon',
                                        'primary-controller',
                                        'controller',
                                        'quantum']):
