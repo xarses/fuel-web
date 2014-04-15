@@ -1036,5 +1036,494 @@
                 }
             }
         }
+    },
+    "ja-JP": {
+        "translation": {
+            "common": {
+                "title": "Fuel ダッシュボード",
+                "select_all_button": "全部選択",
+                "load_defaults_button": "ディフォルトロード",
+                "cancel_changes_button": "変更取り消し",
+                "apply_button": "適用",
+                "rename_button": "リネーム",
+                "delete_button": "削除",
+                "stop_button": "停止",
+                "reset_button": "リセット",
+                "save_settings_button": "設定保存",
+                "cancel_button": "取り消し",
+                "apply_changes_button": "変更適用",
+                "not_available": "N/A",
+                "size": {
+                    "byte": "byte",
+                    "byte_plural": "bytes",
+                    "kb": "KB",
+                    "mb": "MB",
+                    "gb": "GB",
+                    "tb": "TB"
+                },
+                "node":"__count__ ノード",
+                "node_plural":"__count__ ノード",
+                "important": "大切",
+                "success": "成功",
+                "error": "エラー",
+                "see_logs": "ログを参照してください",
+                "copyright": "著作権 © 2013-2014 Mirantis. 無断複写·転載禁じ"
+            },
+            "node_details": {
+                "cpu": "CPU",
+                "hdd": "HDD",
+                "ram": "RAM",
+                "system": "システム",
+                "memory": "メモリ",
+                "disks": "ディスク",
+                "interfaces": "インターフェース"
+            },
+            "cluster": {
+                "status": {
+                    "new": "新しい",
+                    "deployment": "デプロイしています",
+                    "operational": "使用可能",
+                    "error": "エラー",
+                    "remove": "削除しています",
+                    "stopped": "停止"
+                },
+                "mode": {
+                    "ha_compact": "高可用性を備えた複数ノード",
+                    "multinode": "複数ノード"
+                }
+            },
+            "network": {
+                "fuelweb_admin": "管理 (PXE)",
+                "fixed": "バーチャルマシン (固定)",
+                "public": "パブリック",
+                "floating": "フローティング",
+                "management": "運営",
+                "storage": "ストレージ"
+            },
+            "navbar": {
+                "environments": "環境",
+                "releases": "リリース",
+                "support": "サポート",
+                "stats": {
+                    "合計": ["トータル", "ノード"],
+                    "total_plural": ["トータル", "複数ノード"],
+                    "unallocated": ["未割り当て", "ノード"],
+                    "unallocated_plural": ["未割り当て", "複数ノード"]
+                }
+            },
+            "breadcrumbs": {
+                "home": "ホーム",
+                "environments": "環境",
+                "releases": "リリース",
+                "support": "サポート",
+                "notifications": "通知",
+                "capacity": "容量"
+            },
+            "notifications_page": {
+                "title": "通知"
+            },
+            "notifications_popover": {
+                "view_all_button": "全部表示",
+                "no_notifications_text": "表示する通知はありません。"
+            },
+            "support_page": {
+                "title": "サポート",
+                "contact_text": "問題を報告するか、単に改善を提案する必要がある場合は、下のボタンをクリックします.できるだけ早くご連絡いたします。",
+                "irc_text": "ご質問がある場合は、IRCチャネルで、開発者に尋ねることができます。",
+                "log_text": "いくつかのバグやエラーが発生した場合は、導入と操作ログとサポートチームを提供する必要があります。下のボタンをクリックすることにより、一度にすべてをダウンロードすることができます。",
+                "contact_support": "お問い合わせ·サポート",
+                "register_fuel_title": "Fuelに登録",
+                "register_fuel_content": "登録すると、問題やMirantis製品の新しいバージョンに関する重要な通知を受け取ることが保証されます。さらに、次の30日間、基本的なサポート·サービスを得えます！",
+                "download_diagnostic_snapshot_text": "診断スナップショットをダウンロード",
+                "gen_logs_snapshot_text": "ログスナップショットを生成しています...",
+                "loading": "ロード中...",
+                "gen_diagnostic_snapshot_text": "診断スナップショットを生成します",
+                "diagnostic_snapshot": "診断スナップショット",
+                "capacity_audit": "容量監査",
+                "capacity_audit_text": "良いリソースを管理するため、とのOpenStackの役割が展開されているかを調べるためには、このレポートを実行することができます。",
+                "view_capacity_audit": "容量監査を見る"
+            },
+            "release_page": {
+                "title": "リリース",
+                "release_name": "OpenStack リリース",
+                "release_version": "バージョン",
+                "release_status": "ステータス",
+                "release_actions": "アクション",
+                "no_releases_message": "利用可能なリリースはありません。",
+                "release": {
+                    "configure_button": "設定",
+                    "active": "アクティブ",
+                    "error": "エラー",
+                    "not_available": "利用不可",
+                    "download_progress": "ダウンロード中"
+                }
+            },
+            "clusters_page": {
+                "title": "OpenStack環境",
+                "create_cluster_text": "新OpenStack環境生成",
+                "cluster_hardware_nodes": "ノード",
+                "cluster_hardware_cpu": "CPU (cores)",
+                "cluster_hardware_hdd": "HDD",
+                "cluster_hardware_ram": "RAM"
+            },
+            "cluster_page": {
+                "tabs": {
+                    "nodes": "ノード",
+                    "network": "ネットワーク",
+                    "settings": "設定",
+                    "logs": "ログ",
+                    "healthcheck": "ヘルスチェック",
+                    "actions": "アクション"
+                },
+                "nodes_tab": {
+                    "roles": "役割",
+                    "hardware_info": "ハードウェア情報",
+                    "roles_and_hardware_info": "役割とハードウェア情報",
+                    "assign_roles": "役割割り当て",
+                    "configure_interfaces": {
+                        "title": "__name__上インターフェイス設定",
+                        "title_plural": "__count__ nodes上インターフェイス設定",
+                        "bond_button": "ボンドインターフェイス",
+                        "unbond_button": "ボンドインターフェイス取り消し",
+                        "bond_speed_warning": "異なる速度のボンドインターフェイスを生成することはお勧めしません。",
+                        "speed": "スピード",
+                        "bonding_mode": "モード",
+                        "bonding_modes": {
+                            "active-backup": "アクティブなバックアップ",
+                            "balance-slb": "バランス SLB",
+                            "lacp-balance-tcp": "LACP バランス TCP"
+                        },
+                        "drag_and_drop_description": "論理ネットワーク間のインタフェースをドラッグアンドドロップすることができます。",
+                        "neutron_vlan_range": "Neutron VLAN IDs",
+                        "validation": {
+                            "too_many_untagged_networks": "タグなしのネットワークが同じインターフェイスに割り当てることはできません。"
+                        }
+                    },
+                    "configure_disks": {
+                        "title": "__name__上ディスク設定",
+                        "title_plural": "Configure disks on __count__ nodes",
+                        "disk_information": "Disk Information",
+                        "volume_groups": "Volume Groups",
+                        "total_space": "Total Space",
+                        "unallocated": "Unallocated",
+                        "use_all_allowed_space": "Use All Allowed Space"
+                    },
+                    "node_management_panel": {
+                        "group_by": "Group By",
+                        "filter_by": "Filter By",
+                        "filter_placeholder": "Node name/mac",
+                        "edit_roles_button": "Edit Roles",
+                        "add_nodes_button": "Add Nodes",
+                        "cant_configure_disks": "Unable to configure disks",
+                        "cant_configure_interfaces": "Unable to configure interfaces",
+                        "disks_configuration_warning": "Only nodes with identical disk capacities can be configured together in the same action.",
+                        "interfaces_configuration_warning": "Only undeployed nodes with an identical number of network interfaces can be configured together in the same action."
+                    },
+                    "node": {
+                        "status": {
+                            "discovered": "Discovered",
+                            "offline": "Offline",
+                            "error": "Error",
+                            "view_logs": "View Logs",
+                            "pending_addition": "Pending Addition",
+                            "pending_deletion": "Pending Deletion",
+                            "ready": "Ready",
+                            "installing_os": "Installing __os__",
+                            "os_is_installed": "__os__ is installed",
+                            "installing_openstack": "Installing OpenStack",
+                            "discard_addition": "Discard Addition",
+                            "discard_deletion": "Discard Deletion",
+                            "discard_role_changes": "Discard Role Changes"
+                        },
+                        "edit_name": "Edit Name",
+                        "unallocated": "unallocated"
+                    },
+                    "back_to_nodes_button": "Back To Node List",
+                    "unallocated_nodes": "Unallocated Nodes",
+                    "no_selected_nodes": "There are no selected nodes to edit.",
+                    "disk_configuration_reset_warning": "Disk configuration will be reset to default after roles change.",
+                    "no_nodes_in_environment": "To add nodes to the environment, select the Add Nodes option, choose the nodes you want to allocate and assign roles to each.",
+                    "no_nodes_in_fuel": "A pool of one or more unallocated nodes is needed for this operation. To add to the pool, configure nodes to boot from the network (a.k.a. PXE booting). Fuel will automatically provision and discover the nodes.",
+                    "one_controller_restriction": "Only one controller can be assigned in a multi-node deployment that is not Highly-Available (HA).",
+                    "incompatible_roles_warning" : "This role cannot be combined with the other roles already selected.",
+                    "new_controllers_in_ha_mode_restriction": "New controllers cannot be added to an operational environment.",
+                    "no_filtered_nodes_warning": "There are no nodes found matching the filter value.",
+                    "filtered_nodes_count":"__filteredNodesCount__ of __count__ node",
+                    "filtered_nodes_count_plural": "__filteredNodesCount__ of __count__ nodes"
+                },
+                "settings_tab": {
+                    "title": "OpenStack Settings"
+                },
+                "actions_tab": {
+                    "title": "Actions",
+                    "rename_environment": "Rename Environment",
+                    "delete_environment": "Delete Environment",
+                    "alert_delete": "Clean up each node and return it to the pool of unallocated nodes.",
+                    "reset_environment": "Reset Environment",
+                    "reset_environment_description": "Enables you to modify the settings for the environment and redeploy.",
+                    "reset_environment_warning": "This action will reset all existing nodes to their pre-deployment state, deleting your existing environment.",
+                    "reset_disabled_for_new_cluster": "Reset Environment is not available for an environment not yet deployed.",
+                    "repeated_reset_disabled": "The current environment is already being reset.",
+                    "reset_disabled_for_deploying_cluster": "Reset Environment is not available for an environment still being deployed. Use Stop Deployment to stop the deployment process."
+                },
+                "network_tab": {
+                    "title": "Network Settings",
+                    "flatdhcp_manager": "FlatDHCP Manager",
+                    "vlan_manager": "VLAN Manager",
+                    "verify_networks_button": "Verify Networks",
+                    "network_verification": "Network verification",
+                    "neutron_segmentation": "Neutron with __segment_type__ segmentation",
+                    "untagged": "untagged",
+                    "range_start": "Start",
+                    "range_end": "End",
+                    "verify_networks": {
+                        "step_0": "Network Verification is done in 4 steps:",
+                        "step_1": "1. Every node starts listening for test frames",
+                        "step_2": "2. Every node sends out 802.1Q tagged UDP frames",
+                        "step_3": "3. Nodes listeners register test frames from other nodes",
+                        "step_4": "4. Send DHCP discover messages on all available ports.",
+                        "success_alert": "Verification succeeded. Your network is configured correctly.",
+                        "fail_alert": "Verification failed.",
+                        "node_name": "Node Name",
+                        "node_mac_address": "Node MAC address",
+                        "node_interface": "Node Interface",
+                        "expected_vlan": "Expected VLAN (not received)"
+                    },
+                    "network_parameters": {
+                        "ip_range": "IP Range",
+                        "gateway": "Gateway",
+                        "cidr": "CIDR",
+                        "use_vlan_tagging": "Use VLAN tagging"
+                    },
+                    "networking_parameters": {
+                        "fixed_cidr": "Fixed network CIDR",
+                        "fixed_size": "Fixed network size",
+                        "fixed_amount": "Number of fixed networks",
+                        "fixed_vlan_range": "Fixed VLAN ID range",
+                        "use_vlan_tagging_fixed": "Use VLAN tagging for fixed  networks",
+                        "nova_configuration": "Nova-network Configuration",
+                        "dns_servers": "DNS Servers",
+                        "l2_configuration": "Neutron L2 Configuration",
+                        "l3_configuration": "Neutron L3 Configuration",
+                        "gre_id_range": "Tunnel ID range",
+                        "vlan_range": "VLAN ID range",
+                        "base_mac": "Base MAC address",
+                        "internal_cidr": "Internal network CIDR",
+                        "internal_gateway": "Internal network gateway",
+                        "floating_ranges": "Floating IP ranges"
+                    },
+                    "validation": {
+                        "large_network": "Network is too large",
+                        "small_network": "Network is too small",
+                        "invalid_cidr": "Invalid CIDR",
+                        "invalid_ip_start": "Invalid IP range start",
+                        "invalid_ip_end": "Invalid IP range end",
+                        "invalid_ip_range": "IP range start is greater than IP range end",
+                        "empty_ip_range": "Please specify at least one IP range",
+                        "invalid_vlan": "Invalid VLAN ID",
+                        "forbidden_vlan": "This VLAN ID is used by other networks. Please choose another ID",
+                        "invalid_netmask": "Invalid netmask",
+                        "invalid_gateway": "Invalid gateway",
+                        "invalid_amount": "Invalid amount of networks",
+                        "gateway_is_out_of_ip_range": "This Gateway address is outside of IP range",
+                        "gateway_is_out_of_internal_ip_range": "This Gateway address is out of the internal network IP range",
+                        "need_more_vlan": "The number of networks defined needs more VLAN IDs than available. Check VLAN ID Range field.",
+                        "invalid_nameserver": "Invalid nameserver",
+                        "invalid_id_start": "Invalid ID range start",
+                        "invalid_id_end": "Invalid ID range end",
+                        "invalid_id_range": "The ID range start is greater than ID range end",
+                        "vlan_intersection": "There is an intersection with the VLAN ID of other networks. Please set another ID range",
+                        "invalid_mac": "Invalid MAC address",
+                        "ip_start_is_out_of_ip_range": "The IP start is outside of the IP range",
+                        "ip_end_is_out_of_ip_range": "The IP end is outside of the IP range"
+                    }
+                },
+                "logs_tab": {
+                    "title": "Logs",
+                    "logs": "Logs",
+                    "node": "Node",
+                    "source": "Source",
+                    "min_level": "Min. level",
+                    "show": "Show",
+                    "log_alert": "Unable to fetch logs.",
+                    "source_alert": "Unable to fetch log sources.",
+                    "date": "Date",
+                    "message": "Message",
+                    "bottom_text": "Some previous lines have been skipped. Show more lines",
+                    "all_logs": "All",
+                    "no_log_text": "No log entries match current filters."
+                },
+                "healthcheck_tab": {
+                    "title": "OpenStack Health Check",
+                    "run_tests_button": "Run Tests",
+                    "stop_tests_button": "Stop Tests",
+                    "deploy_alert": "You must deploy your OpenStack environment before running tests against it.",
+                    "not_available_alert": "OSTF server is not available.",
+                    "expected_duration": "Expected Duration",
+                    "actual_duration": "Actual Duration",
+                    "status": "Status"
+                },
+                "discard_changes": "Discard Changes",
+                "deploy_changes": "Deploy Changes",
+                "redhat_setup": "Downloading",
+                "reset_environment": "Resetting",
+                "stop_deployment": "Stopping",
+                "stop_deployment_button": "Stop deployment",
+                "deployment_mode": "Environment Deployment Mode:",
+                "openstack_release": "OpenStack Release:",
+                "environment_status": "Environment Status:",
+                "cluster_was_modified_from_cli" : "Some deployment parameters for this environment have been modified from Fuel CLI. Changes from Fuel CLI take precedence over any settings made from your browser. Proceed with caution.",
+                "reconfigure_redhat_account": "You can __opt1__ reconfigure your Red Hat account __opt2__ or "
+            },
+            "capacity_page": {
+                "title": "Capacity Audit",
+                "license_usage": "License Usage Report",
+                "fuel_version": "Fuel version",
+                "fuel_uuid": "Fuel UUID",
+                "env_name": "Environment Name",
+                "node_count": "Node Count",
+                "total_number_alloc_nodes": "Total number of allocated nodes",
+                "total_number_unalloc_nodes": "Total number of unallocated nodes",
+                "node_role": "Node role(s)",
+                "nodes_with_config": "Number of nodes with this configuration",
+                "download_report": "Download report",
+                "loading": "Loading..."
+            },
+            "dialog": {
+                "create_cluster_wizard": {
+                    "title": "Create a new OpenStack environment",
+                    "prev": "Prev",
+                    "next": "Next",
+                    "create": "Create",
+                    "name_release": {
+                        "title": "Name and Release",
+                        "name": "Name",
+                        "release_label": "OpenStack Release",
+                        "red_hat_info": "To deploy Red Hat OpenStack, you must first download both RHOS and RHEL to be cached on the Fuel master node.  You can do this from the Releases page or just choose your subscription type and enter your credentials below.  RHEL and RHOS will be automatically downloaded and cached after you create the environment."
+                    },
+                    "mode": {
+                        "title": "Deployment Mode"
+                    },
+                    "compute": {
+                        "title": "Compute",
+                        "kvm_description": "Choose this type of hypervisor if you run OpenStack on hardware",
+                        "qemu_description": "Choose this type of hypervisor if you run OpenStack on virtual hosts"
+                    },
+                    "network": {
+                        "title": "Network",
+                        "alert": "Neutron is not supported in __releaseName__",
+                        "nova_network": "Nova-Network",
+                        "neutr_gre": "Neutron with GRE segmentation",
+                        "neutr_vlan": "Neutron with VLAN segmentation"
+                    },
+                    "storage": {
+                        "title": "Storage Backends",
+                        "alert": "Ceph is not supported in __releaseName__",
+                        "default": "Default",
+                        "ceph": "Ceph",
+                        "cinder": "Cinder",
+                        "cinder_help": "By default, Cinder block storage uses LVM volumes shared over iSCSI. Ceph backend requires two or more Ceph-OSD nodes and the KVM hypervisor.",
+                        "glance": "Glance",
+                        "glance_help": "By default, Glance image service uses Swift object storage in HA deployment mode, and local storage on the Controller node in simple multi-node mode. Ceph backend requires two or more Ceph-OSD nodes."
+                    },
+                    "additional": {
+                        "title": "Additional Services",
+                        "release_alert": "Additional services are not available in __releaseName__",
+                        "network_mode_alert": "Murano is not available for current network mode. Please choose Neutron networking to enable.",
+                        "install_sahara": "Install Sahara",
+                        "install_sahara_description": "Sahara enables on demand provisioning of Hadoop clusters to be deployed on OpenStack utilizing a variety of vendor distributions.",
+                        "install_murano": "Install Murano",
+                        "install_murano_description": "Murano enables Windows or Linux based datacenter services like Active Directory, IIS, Apache, Microsoft SQL and ASP.NET to be deployed on OpenStack.",
+                        "install_ceilometer": "Install Ceilometer (OpenStack Telemetry)",
+                        "install_ceilometer_description": "Ceilometer provides metering and monitoring of an OpenStack cloud."
+                    },
+                    "ready": {
+                        "title": "Finish",
+                        "env_select_deploy": "Your environment is now ready for deployment! After clicking on the Create button, you can select",
+                        "or_make_config_choice": "or make additional configuration choices in the Fuel",
+                        "console": "console.",
+                        "deploy": "Deploy Changes",
+                        "env": "Environments"
+                    }
+                },
+                "dismiss_settings": {
+                    "title": "Confirm",
+                    "important": "Important",
+                    "stay_button": "Stay on page",
+                    "leave_button": "Leave page and discard changes",
+                    "default_message": "Settings were modified but not saved. Do you want to discard your changes and leave the page?",
+                    "verify_message": "Network verification is in progress. You should save changes or stay on the tab."
+                },
+                "display_changes": {
+                    "title": "Deploy Changes",
+                    "added_node": "Added __nodesCount__ node.",
+                    "added_node_plural": "Added __nodesCount__ nodes.",
+                    "deleted_node": "Deleted __nodesCount__ node.",
+                    "deleted_node_plural":  "Deleted __nodesCount__ nodes.",
+                    "reconfigured_node": "Reconfigured roles of  __nodesCount__ node.",
+                    "reconfigured_node_plural": "Reconfigured roles of  __nodesCount__ nodes.",
+                    "settings_changes": {
+                        "attrs": "OpenStack settings.",
+                        "networks": "network settings.",
+                        "disks": "disk configuration of the following nodes:"
+                    },
+                    "warnings": {
+                        "controller": "Environment should have __nodeSize__ controller node",
+                        "controller_plural": "Environment should have __nodeSize__ controller nodes",
+                        "compute": "Compute nodes are recommended for deployment"
+                    },
+                    "changed_task_name": "Changed __item__",
+                    "changed": "Changed",
+                    "deleted": "Deleted",
+                    "deploy": "Deploy",
+                    "redeployment_needed": "Some nodes have an error status after deployment. Redeployment is needed."
+                },
+                "show_node": {
+                    "manufacturer_label": "Manufacturer",
+                    "mac_address_label": "MAC Address",
+                    "fqdn_label": "FQDN",
+                    "ssh_console": "SSH console",
+                    "network_configuration_button": "Configure Interfaces",
+                    "disk_configuration_button": "Configure Disks",
+                    "close_button": "Close",
+                    "total": "total",
+                    "bytes": "bytes",
+                    "drive": "drive",
+                    "drive_plural": "drives"
+                },
+                "rhel_license": {
+                    "title": "Red Hat Enterprise Linux Account Settings",
+                    "description": "To deploy the Red Hat Enterprise Linux OpenStack Platform, you must first download it to be cached on the Fuel master node.  You can do this from the Releases page or just choose your subscription type and enter your credentials below.  The RHEL OpenStack Platform will be automatically downloaded and cached after you create the environment.",
+                    "rhn_sattelite": "RHN Satellite",
+                    "redhat_username": "Red Hat Username",
+                    "redhat_password": "Red Hat Password",
+                    "satellite_server_hostname": "Satellite Server Hostname",
+                    "activation_key": "Activation Key"
+                },
+                "discard_changes": {
+                    "title": "Discard Changes",
+                    "discard_button": "Discard",
+                    "alert_text": "Are you sure you want to discard these changes?",
+                    "cant_discard": "Can't discard node changes"
+                },
+                "remove_cluster": {
+                    "title": "Delete Environment",
+                    "incomplete_actions_text": "There are incompleted actions. Removing of the environment may fail and lead to inconsistent state.",
+                    "node_returned_text": "Each node will be cleaned up and returned to the pool of unallocated nodes."
+                },
+                "stop_deployment": {
+                    "title": "Stop Deployment",
+                    "text": "Are you sure you want to stop this deployment? Any progress will be lost and nodes will be reset to their pre-deployment state.",
+                    "provisioning_warning": "Are you sure you want to stop this deployment? Any progress on nodes not yet provisioned will be lost and those nodes will be reset to their pre-deployment state."
+                },
+                "reset_environment": {
+                    "title": "Reset Environment",
+                    "text": "Are you sure you want to reset this environment? All nodes in the environment will be deleted and returned to their pre-deployment state."
+                },
+                "error_occured": {
+                    "alert_text": "A server error has occured. Please contact the administrators."
+                }
+            }
+        }
     }
 }

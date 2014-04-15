@@ -246,7 +246,8 @@ function(utils, models, dialogViews, navbarTemplate, nodesStatsTemplate, notific
         },
         locales: [
             {name: 'EN', locale: 'en-US'},
-            {name: 'CN', locale: 'zh-CN'}
+            {name: 'CN', locale: 'zh-CN'},
+            {name: 'JA', locale: 'ja-JP'}
         ],
         setLocale: function(e) {
             var newLocale = _.find(this.locales, {locale: $(e.currentTarget).data('locale')});
